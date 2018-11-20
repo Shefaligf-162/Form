@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Input from './components/Input/input';
 import Button from './components/Button/button';
 
+
 class App extends Component {
 	state={
 		student_details:{
@@ -78,7 +79,7 @@ class App extends Component {
 			valid:false,
 			lable:'Password'
 		},
-		loading:false
+		//loading:false
 		
 
 	}
@@ -112,6 +113,7 @@ class App extends Component {
   	}		
 
   	const sign_upHandler=(event)=>{
+
   		event.preventDefault();
   		this.setState({loading:true});
   		const sign_upData={};
@@ -147,7 +149,7 @@ class App extends Component {
       	 value={formElement.config.value}
       	 />
       	))}
-      <Button>Submit</Button>
+      <Button onchange={sign_upHandler}>Sign Up</Button>
       
        </form>
       </div>
